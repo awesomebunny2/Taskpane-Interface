@@ -89,7 +89,7 @@ $("#subject").on("keyup", function() {
 
             // .NET stuff at end (~/*20104,51824,2*/~)
             // Remove spaces (just in case), "~/*", "*/~", then split at ","
-            var splitCodes = noBlanksArr[3].replace(' ','').replace('~/*','').replace('*/~','').split(",");
+            var splitCodes = noBlanksArr[noBlanksArr.length - 1].replace(' ','').replace('~/*','').replace('*/~','').split(",");
 
             /**
              client id: splitCodes[0]
@@ -103,7 +103,7 @@ $("#subject").on("keyup", function() {
             var theLocation = noBlanksArr[1];
             var updatedLocation = removeFirstAndLastSpace(theLocation);
 
-            var theProduct = noBlanksArr[2];
+            var theProduct = noBlanksArr[noBlanksArr.length - 2];
             var updatedProduct = removeFirstAndLastSpace(theProduct);
 
             var theCode = splitCodes[0];
