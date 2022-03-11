@@ -30,34 +30,66 @@ $("#subject").on("keyup", function() {
       
        $("#message").hide() // Hide error
       
-       /** ------------------------------------------------------------
+        /** ------------------------------------------------------------
          Parse the subject, fill the other inputs
-       ------------------------------------------------------------ */
-      
-       // Split at "-"s
-       var splitPaste = paste.split("-");
- 
-       /**
-       client: splitPaste[0]
-       product: splitPaste[1]
-       codes: splitPaste[2]
-       */
+        ------------------------------------------------------------ */
 
-       //OR
+        // Split at "-"s
+        var splitPaste = paste.split("-");
 
-       /*
-       client: splitPaste[0]
-       location: splitPaste[1]
-       product: splitPaste[2]
-       codes: splitPaste[3]
-       */
+        /**
+         client: splitPaste[0]
+        product: splitPaste[1]
+        codes: splitPaste[2]
+        */
+
+        //OR
+
+        /*
+        client: splitPaste[0]
+        location: splitPaste[1]
+        product: splitPaste[2]
+        codes: splitPaste[3]
+        */
+
+        var blanks = splitPaste.includes("");
+
+        if (blanks == true) {
+
+            var noBlanksArr = splitPaste.filter(function(x) {
+                return x !== "";
+            });
+
+        } else {
+
+            var noBlanksArr = splitPaste;
+
+        };
 
 
-        if (splitPaste.length > 4) { //if the subject line includes a location, do this...
+        if (noBlanksArr[0].includes(":")) {
+
+            var str = noBlanksArr[0];
+            
+            str = str.substring(str.indexOf(":") + 1);
+
+            noBlanksArr.splice(0, 1, str);
+
+        };
+
+        var hasRequest = noBlanksArr[0].includes("CREATIVE REQUEST") || noBlanksArr[0].includes("Creative Request") || noBlanksArr[0].includes("ARTIST REQUEST") || noBlanksArr[0].includes("Artist Request");
+
+        if (hasRequest == true) {
+
+            noBlanksArr.shift();
+
+        };
+
+        if (noBlanksArr.length > 3) { //if the subject line includes a location, do this...
 
             // .NET stuff at end (~/*20104,51824,2*/~)
             // Remove spaces (just in case), "~/*", "*/~", then split at ","
-            var splitCodes = splitPaste[3].replace(' ','').replace('~/*','').replace('*/~','').split(",");
+            var splitCodes = noBlanksArr[3].replace(' ','').replace('~/*','').replace('*/~','').split(",");
 
             /**
              client id: splitCodes[0]
@@ -65,13 +97,13 @@ $("#subject").on("keyup", function() {
             line: splitCodes[2]
             */
 
-            var theClient = splitPaste[0];
+            var theClient = noBlanksArr[0];
             var updatedClient = removeFirstAndLastSpace(theClient);
 
-            var theLocation = splitPaste[1];
+            var theLocation = noBlanksArr[1];
             var updatedLocation = removeFirstAndLastSpace(theLocation);
 
-            var theProduct = splitPaste[2];
+            var theProduct = noBlanksArr[2];
             var updatedProduct = removeFirstAndLastSpace(theProduct);
 
             var theCode = splitCodes[0];
@@ -95,7 +127,7 @@ $("#subject").on("keyup", function() {
 
             // .NET stuff at end (~/*20104,51824,2*/~)
             // Remove spaces (just in case), "~/*", "*/~", then split at ","
-            var splitCodes = splitPaste[2].replace(' ','').replace('~/*','').replace('*/~','').split(",");
+            var splitCodes = noBlanksArr[2].replace(' ','').replace('~/*','').replace('*/~','').split(",");
 
             /**
              client id: splitCodes[0]
@@ -103,10 +135,10 @@ $("#subject").on("keyup", function() {
             line: splitCodes[2]
             */
 
-            var theClient = splitPaste[0];
+            var theClient = noBlanksArr[0];
             var updatedClient = removeFirstAndLastSpace(theClient);
 
-            var theProduct = splitPaste[1];
+            var theProduct = noBlanksArr[1];
             var updatedProduct = removeFirstAndLastSpace(theProduct);
 
             var theCode = splitCodes[0];
