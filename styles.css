@@ -44,6 +44,12 @@ body, html {
 
 }
 
+#message {
+    display: none;
+    color: crimson;
+    font-size: 9px;
+}
+
 
 
 
@@ -56,6 +62,9 @@ body, html {
     flex-grow:1;
     width:100%;
     overflow: auto;
+    /* justify-content: auto; */
+    justify-content: space-between;
+    align-items: flex-start;
     
 }
 
@@ -67,23 +76,17 @@ body, html {
     padding: 10px 0px;
     font-weight: 500;
     width: 85%;
-    
 }
 
 label {
     color: #515151;
 }
 
-.text-box {
-    margin-top: 7px;
-    width: 99%;
-    min-height: 25px;
-    text-align: center;
-    border-color: #C8C8C8;
-    border-width: 1.5px;
-    border-style: groove;
-    background-color: #f4f4f444;
+input {
+    box-sizing: border-box;
 }
+
+
 
 ::placeholder {
     font-size: 9px;
@@ -122,9 +125,24 @@ span.astrick {
     /* float: right; */
 }
 
-.text-box-split {
+.text-box {
+        height: 29px;
+    border-style: groove;
+    border-width: 1.5px;
+    min-height: 30px;
     margin-top: 7px;
-    width: 98.35%;
+    width: 100%;
+    text-align: center;
+    border-color: #C8C8C8;
+    border-width: 1.5px;
+    border-style: groove;
+    background-color: #f4f4f444;
+}
+
+/*
+.text-box {
+    margin-top: 7px;
+    width: 100%;
     min-height: 25px;
     text-align: center;
     border-color: #C8C8C8;
@@ -133,6 +151,17 @@ span.astrick {
     background-color: #f4f4f444;
 }
 
+.text-box-split {
+    margin-top: 7px;
+    width: 100%;
+    min-height: 25px;
+    text-align: center;
+    border-color: #C8C8C8;
+    border-width: 1.5px;
+    border-style: groove;
+    background-color: #f4f4f444;
+}
+*/
 
 .sel {
     height: 29px;
