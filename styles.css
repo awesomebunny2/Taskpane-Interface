@@ -126,7 +126,7 @@ span.astrick {
 }
 
 .text-box {
-        height: 29px;
+    height: 29px;
     border-style: groove;
     border-width: 1.5px;
     min-height: 30px;
@@ -138,30 +138,6 @@ span.astrick {
     border-style: groove;
     background-color: #f4f4f444;
 }
-
-/*
-.text-box {
-    margin-top: 7px;
-    width: 100%;
-    min-height: 25px;
-    text-align: center;
-    border-color: #C8C8C8;
-    border-width: 1.5px;
-    border-style: groove;
-    background-color: #f4f4f444;
-}
-
-.text-box-split {
-    margin-top: 7px;
-    width: 100%;
-    min-height: 25px;
-    text-align: center;
-    border-color: #C8C8C8;
-    border-width: 1.5px;
-    border-style: groove;
-    background-color: #f4f4f444;
-}
-*/
 
 .sel {
     height: 29px;
@@ -187,21 +163,6 @@ span.astrick {
 }
 
 
-
-/*
-.split-dropdown {
-    margin-top: 7px;
-    width: 100%;
-    min-height: 25px;
-    text-align: center;
-    border-color: #C8C8C8;
-    border-width: 1.5px;
-    border-style: groove;
-    background-color: #f4f4f444;
-    overflow: hidden;
-}*/
-
-
 .my-arrow {
     position:relative;
     right:24px;
@@ -215,6 +176,16 @@ span.astrick {
 list {
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+select {
+    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+	-moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
+    text-align:-webkit-center;
+    border-style: none;
+    -webkit-appearance: textfield;
 }
 
 
@@ -249,52 +220,4 @@ list {
     font-weight: 100;
     padding: 15px;
 }
-
-
-/* .dropbtn {
-    cursor: pointer;
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: blue;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  }
-  
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {background-color: #ddd}
-  
-  .show {display:block;} */
-
-  /* .product-dropdown {
-      overflow: hidden;
-  } */
  
