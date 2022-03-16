@@ -249,8 +249,34 @@
 <div id="datepicker"></div>
 
 
+<!-- Progressbar -->
+<h2 class="demoHeaders">Selectmenu</h2>
+<select id="selectmenu">
+	<option>Slower</option>
+	<option>Slow</option>
+	<option selected="selected">Medium</option>
+	<option>Fast</option>
+	<option>Faster</option>
+</select>
 
 
+<!-- Menu -->
+<h2 class="demoHeaders">Menu</h2>
+<ul style="width:100px;" id="menu">
+	<li><div>Item 1</div></li>
+	<li><div>Item 2</div></li>
+	<li><div>Item 3</div>
+		<ul>
+			<li><div>Item 3-1</div></li>
+			<li><div>Item 3-2</div></li>
+			<li><div>Item 3-3</div></li>
+			<li><div>Item 3-4</div></li>
+			<li><div>Item 3-5</div></li>
+		</ul>
+	</li>
+	<li><div>Item 4</div></li>
+	<li><div>Item 5</div></li>
+</ul>
 
 
 <!-- Highlight / Error -->
@@ -286,8 +312,10 @@ $( "#datepicker" ).datepicker({
 
 
 
+$( "#menu" ).menu();
 
 
+$( "#selectmenu" ).selectmenu();
 
 // Hover states on the static widgets
 $( "#dialog-link, #icons li" ).hover(

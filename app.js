@@ -4,7 +4,9 @@
  */
 $(function() {
 
-    $( "#print-date" ).datepicker();
+    // $( "#print-date" ).datepicker();
+
+    $("select").selectmenu();
 
 
     // RUNS WHEN DOCUMENT IS LOADED
