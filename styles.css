@@ -132,23 +132,36 @@ span.astrick {
     min-height: 30px;
     margin-top: 7px;
     width: 100%;
-    text-align: left;
+    text-align: center;
     border-color: #C8C8C8;
     border-width: 1.5px;
     border-style: groove;
     background-color: #f4f4f444;
 }
 
-selectmenu
-
-/* .sel {
+.sel {
     height: 29px;
     border-style: groove;
     border-width: 1.5px;
     min-height: 30px;
+    appearance: none;
     border-color: #C8C8C8;
     background-color: #f4f4f444;
-} */
+}
+
+select {
+    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
+	-moz-appearance: none; 
+	-webkit-appearance: none; 
+	appearance: none;
+    text-align:-webkit-center;
+    text-indent: 10px;
+    border-style: groove;
+    border-color: #C8C8C8;
+    background-color: #f4f4f444;
+    border-width: 5px;
+    -webkit-appearance: textfield;
+}
 
 
 
@@ -156,6 +169,7 @@ selectmenu
     font-size: 9px;
     font-style: italic;
     text-align: center;
+    appearance: none;
     color: rgba(0, 0, 0, 0.25);
     background-color: #f4f4f444;
     border-color: #C8C8C8;
@@ -180,29 +194,8 @@ list {
     -moz-appearance: none;
 }
 
-/* select {
-    background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 95% 50%;
-	-moz-appearance: none; 
-	-webkit-appearance: none; 
-	appearance: none;
-    text-align:-webkit-center;
-    border-style: none;
-    -webkit-appearance: textfield;
-} */
 
-.ui-selectmenu-button.ui-button {
-    text-align: center;
-    width: Calc(100% - 28px);
-}
 
-.ui-widget {
-    font-size: 10pt;
-}
-
-.ui-menu {
-    max-width: 228px;
-    max-height: 300px;
-}
 
 
 
@@ -233,4 +226,6 @@ list {
     font-weight: 100;
     padding: 15px;
 }
+ 
+
  
